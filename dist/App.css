@@ -1,0 +1,113 @@
+.app, .Rain, .snow {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 40px;
+}
+
+.overview, .savedLocationsArray {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 90vw;
+  height: 45vh;
+  border-radius: 5px;
+  padding-left: 3%;
+  overflow: auto;
+}
+
+.location, .text, .visibility,
+.wind, .temp, .humidity,
+.uv, .time, .entry {
+  font-size: 20px;
+}
+
+.entry {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 3%;
+  margin: 1%;
+}
+
+.nuke {
+  position: 'relative';
+  float: 'right';
+  border-radius: '5px';
+}
+
+.nuke:hover:after {
+  content: 'YOU MONSTER! STOP TOUCHING ME';
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.individualEntry:hover {
+  color: blueviolet;
+  cursor: grab;
+}
+
+.master {
+  background-color: aliceblue;
+}
+
+.droplet {
+	background: #cf1515;
+	width: 1px;
+	height: 89px;
+	position: absolute;
+	bottom: 200px;
+	animation: fall 1.5s  linear  infinite;
+}
+
+@media (max-width: 600px) {
+	.Rain, .snow {
+		height: 105vh;
+	}
+}
+
+@keyframes  fall {
+	0% {
+		transform: translate(0, 0) rotate(15deg)
+	}
+
+	100% {
+		transform: translate(-400px, 1000px) rotate(15deg)
+	}
+}
+
+.snow {
+  height: '100vh';
+  width: '100vw';
+  position: 'fixed';
+}
+
+.nukeButton {
+  background-color: red;
+  color: black;
+  border-radius: 50px;
+  width: 75px;
+  height: 75px;
+}
+
+.nukeButton:hover {
+  color: white;
+  background-color: blueviolet;
+  cursor: grab;
+}
+
+.nukeButton:hover:after {
+  color: black;
+  cursor: grab;
+}
+
+.last {
+  font-size: 2600%;
+}

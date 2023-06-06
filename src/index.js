@@ -5,7 +5,7 @@ import App from "./App.jsx";
 const root = createRoot(document.getElementById("app"))
 
 root.render(
-  <div>
+  <div className='master'>
     <App />
   </div>
 )
