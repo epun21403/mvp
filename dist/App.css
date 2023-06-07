@@ -1,8 +1,10 @@
-.app, .Rain, .snow {
+.app, .Rain, .snow, .last {
   display: flex;
   align-content: center;
   align-items: center;
   flex-direction: column;
+  width: 100vw;
+  height: 100vh;
 }
 
 .title {
@@ -17,7 +19,6 @@
   width: 90vw;
   height: 45vh;
   border-radius: 5px;
-  padding-left: 3%;
   overflow: auto;
 }
 
@@ -41,12 +42,14 @@
 }
 
 .nuke:hover:after {
-  content: 'YOU MONSTER! STOP TOUCHING ME';
+  color: white;
+  content: 'Are you sure?';
 }
 
 img {
   max-width: 100%;
   max-height: 100%;
+  object-fit: fill;
 }
 
 .individualEntry:hover {
@@ -55,16 +58,24 @@ img {
 }
 
 .master {
-  background-color: aliceblue;
+  background-color: rgb(142, 194, 240);
 }
 
 .droplet {
-	background: #cf1515;
+	background-color: azure;
 	width: 1px;
-	height: 89px;
+	height: 80px;
 	position: absolute;
 	bottom: 200px;
 	animation: fall 1.5s  linear  infinite;
+}
+
+.last {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
 }
 
 @media (max-width: 600px) {
@@ -98,16 +109,37 @@ img {
 }
 
 .nukeButton:hover {
+  color: rgba(192, 160, 160, 0.64);
+  cursor: grab;
+}
+
+.nukeButton:hover:after {
   color: white;
   background-color: blueviolet;
   cursor: grab;
 }
 
-.nukeButton:hover:after {
-  color: black;
-  cursor: grab;
+.last {
+  width: 80vw;
+  height: 80vh;
 }
 
-.last {
-  font-size: 2600%;
+@keyframes blink {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: white;
+  }
+}
+
+.nukeButton {
+  animation: blink infinite .5s linear;
+}
+
+.cat {
+  width: 2000px;
+  height: 2000px;
+  position: absolute;
+  left: 0px;
 }

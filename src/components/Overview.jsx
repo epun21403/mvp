@@ -4,7 +4,6 @@ const Overview = ({weatherData}) => {
 
   if (Object.keys(weatherData).length !== 0) {
     const image = weatherData.current.condition.icon;
-
     return (
       <div className='overview'>
         <div className='location'>
