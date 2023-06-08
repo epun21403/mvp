@@ -27,8 +27,7 @@ const App = () => {
     axios.get('http://127.0.0.1:3000/mvp')
     .then((data) => {
       setSavedLocations(data.data);
-      console.log('data here', data);
-      console.log('data here', data.data);
+      console.log('savedLocations info', data.data);
     })
     .catch((err) => {
       console.log('Error getting locations!', err)
