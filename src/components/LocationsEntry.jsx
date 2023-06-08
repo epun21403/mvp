@@ -6,9 +6,9 @@ const LocationsEntry = ({location, handleDelete, submitLocation}) => {
       <div className='individualEntry' onClick={() => submitLocation(location.location)}>
         {location.location}
       </div>
-      <div className='nuke'>
+      <span className='nuke'>
         <button onClick={() => handleDelete(location.location)}>Delete me</button>
-      </div>
+      </span>
     </div>
   )
 }
