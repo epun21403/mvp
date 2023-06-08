@@ -106,7 +106,7 @@ const App = () => {
   const changeSnow = () => {
     setSnowColor(random_color)
     setSnowText(
-      snowText === 'Random Snow' ? 'Normal Snow' : 'Random Snow'
+      snowText === 'Random Snow' ? 'ShuffleColor!!!!' : 'Random Snow'
     )
   }
 
