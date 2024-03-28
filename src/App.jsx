@@ -16,8 +16,6 @@ const App = () => {
   const [isSnowingText, setIsSnowingText] = useState('Make It Snow');
   const [snowColor, setSnowColor] = useState('white');
   const [snowText, setSnowText] = useState('Random Snow');
-  const [nuke, setNuke] = useState(false);
-  const [nukeText, setNukeText] = useState('Nuke Server');
 
   const colors = ['#ff0000', '#00ff00', '#0000ff', '#00C569', '#00C59f', '#ff6600', '#ff3333', '#ffff00', '#FFC569', '#FFC500', '#A43E00'];
   const random_color = colors[Math.floor(Math.random() * colors.length)];
@@ -113,20 +111,12 @@ const App = () => {
     setSnowColor('white');
   }
 
-  const nukeServer = () => {
-    setNuke (!nuke)
-    setNukeText(
-      nukeText === 'Nuke Server' ? 'Rebuild Server' : 'Nuke Server'
-    )
-    alert('👁 👄 👁');
-  }
-
   if (isRaining === true) {
     return (
       <div className='app'>
         <div className="Rain">
           <ObliqueRain  dropletsAmount={1000}  amplitude={400}  />
-          <LocationInput setLocation={setLocation} location={location} submitLocation={submitLocation} addLocation={addLocation} toggleRain={toggleRain} toggleSnow={toggleSnow} changeSnow={changeSnow} snowText={snowText} nukeServer={nukeServer} normalSnow={normalSnow} nukeText={nukeText} isRainingText={isRainingText} isSnowingText={isSnowingText}/>
+          <LocationInput setLocation={setLocation} location={location} submitLocation={submitLocation} addLocation={addLocation} toggleRain={toggleRain} toggleSnow={toggleSnow} changeSnow={changeSnow} snowText={snowText} normalSnow={normalSnow} isRainingText={isRainingText} isSnowingText={isSnowingText}/>
           <br></br>
           <Overview weatherData={weatherData}/>
           <br></br>
@@ -139,7 +129,7 @@ const App = () => {
       <div className='app'>
         <div className='snow'>
           <Snowfall snowflakeCount={1000} color={snowColor}/>
-        <LocationInput setLocation={setLocation} location={location} submitLocation={submitLocation} addLocation={addLocation} toggleRain={toggleRain} toggleSnow={toggleSnow} changeSnow={changeSnow} snowText={snowText} nukeServer={nukeServer} normalSnow={normalSnow} nukeText={nukeText} isRainingText={isRainingText} isSnowingText={isSnowingText}/>
+        <LocationInput setLocation={setLocation} location={location} submitLocation={submitLocation} addLocation={addLocation} toggleRain={toggleRain} toggleSnow={toggleSnow} changeSnow={changeSnow} snowText={snowText} normalSnow={normalSnow} isRainingText={isRainingText} isSnowingText={isSnowingText}/>
         <br></br>
         <Overview weatherData={weatherData}/>
         <br></br>
@@ -147,16 +137,10 @@ const App = () => {
         </div>
       </div>
     )
-  } else if (nuke === true ) {
-    return(
-      <div className='last'>
-        <img className='cat' src='https://media.tenor.com/Ms3zVqn7qcUAAAAC/nuke-press-the-button.gif'/>
-      </div>
-    )
   } else {
     return (
       <div className='app'>
-        <LocationInput setLocation={setLocation} location={location} submitLocation={submitLocation} addLocation={addLocation} toggleRain={toggleRain} toggleSnow={toggleSnow} changeSnow={changeSnow} snowText={snowText} nukeServer={nukeServer} normalSnow={normalSnow} nukeText={nukeText} isRainingText={isRainingText} isSnowingText={isSnowingText}/>
+        <LocationInput setLocation={setLocation} location={location} submitLocation={submitLocation} addLocation={addLocation} toggleRain={toggleRain} toggleSnow={toggleSnow} changeSnow={changeSnow} snowText={snowText} normalSnow={normalSnow} isRainingText={isRainingText} isSnowingText={isSnowingText}/>
         <br></br>
         <Overview weatherData={weatherData}/>
         <br></br>

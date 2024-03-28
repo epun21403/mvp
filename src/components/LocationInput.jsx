@@ -9,7 +9,7 @@ const LocationInput = ({setLocation, location, submitLocation, addLocation, togg
 
   return (
     <div>
-      <div className='title'>Depressed Weather App</div>
+      <div className='title'>MVP Weather App</div>
       <br></br>
       <input onChange={handleChange} placeholder='Please enter location'/>
       <button onClick={() => submitLocation(location)}>Bring me weather</button>
@@ -18,7 +18,6 @@ const LocationInput = ({setLocation, location, submitLocation, addLocation, togg
       <button onClick={() => toggleSnow()}>{isSnowingText}</button>
       <button onClick={() => changeSnow()}>{snowText}</button>
       <button onClick={() => normalSnow()}>Normal Snow</button>
-      <button className='nukeButton' onClick={() => nukeServer()}>{nukeText}</button>
     </div>
   )
 }

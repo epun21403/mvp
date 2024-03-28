@@ -1,3 +1,7 @@
+:root {
+  background-color: rgb(142, 194, 240);
+}
+
 .app, .Rain, .snow, .last {
   display: flex;
   align-content: center;
@@ -55,10 +59,6 @@ img {
 .individualEntry:hover {
   color: blueviolet;
   cursor: grab;
-}
-
-.master {
-  background-color: rgb(142, 194, 240);
 }
 
 .droplet {

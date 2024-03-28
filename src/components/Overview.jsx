@@ -43,7 +43,7 @@ const Overview = ({weatherData}) => {
   } else {
     return (
       <div className='overview empty'>
-        <img src='https://siachenstudios.com/wp-content/uploads/2022/09/Spirit-Of-The-Harvest-Moon.png.webp'/>
+        Please enter a location.
       </div>
     )
   }
