@@ -118,8 +118,7 @@ const App = () => {
     setNukeText(
       nukeText === 'Nuke Server' ? 'Rebuild Server' : 'Nuke Server'
     )
-    alert('Are you sure you want to nuke server?' )
-    alert('Last chance to abort.' )
+    alert('👁 👄 👁');
   }
 
   if (isRaining === true) {
